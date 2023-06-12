@@ -291,11 +291,11 @@ if __name__ == "__main__":
     time_step = 1.0/f/80                        # time step in s
     c = 0.1                                     # renormalized speed of light in voxel/iteration, must be < 1/sqrt(3)
     space_step = constants.c * time_step / c
-    cantenna_radius = 30 # 0.095/2 / space_step
-    cantenna_height = 0 # 0.133 / space_step
-    antenna_from_bottom = 25 # 0.05 / space_step
+    cantenna_radius = 0.095/2 / space_step
+    cantenna_height = 0.133 / space_step
+    antenna_from_bottom = 0.06 / space_step
     cantenna_thickness = 3                      # make walls at least 3 voxels thick, otherwise there might be discretization problems making the can leaky
-    cantenna_bottom = 25                        # n//2 - cantenna_height
+    cantenna_bottom =  n//2 - cantenna_height
     # excitation current. 0.00306 produces radiation pattern approximately calibrated to dBi. 
     current_ampl = 0.00306
     if put_cantenna:
